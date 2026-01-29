@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT
+    ANIMAL_TYPE,
+    count(ANIMAL_ID) as count
+FROM ANIMAL_INS as a
+WHERE ANIMAL_TYPE in ('cat','dog')
+GROUP BY ANIMAL_TYPE
+ORDER BY ANIMAL_TYPE;
