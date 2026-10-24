@@ -1,9 +1,8 @@
 def solution(arr):
     answer = []
-    for n, v in enumerate(arr):
-        if n == len(arr) -1:
-            answer.append(v)
-            break
-        if arr[n] != arr[n+1]:
-            answer.append(v)
+    for n,m in enumerate(arr):
+        if n==0 :
+            answer.append(m)
+        elif m != answer[-1]:
+            answer.append(m)
     return answer
