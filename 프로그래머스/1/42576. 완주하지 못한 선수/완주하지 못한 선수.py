@@ -1,10 +1,8 @@
-from collections import Counter
-
 def solution(participant, completion):
-    participant_counts = Counter(participant)
-    for name in completion:
-        participant_counts[name]-=1
-        
-    for name, count in participant_counts.items():
-        if count > 0:
-            return name
+    answer = ''
+    participant.sort()
+    completion.sort()
+    for n in range(len(completion)):
+        if participant[n] != completion[n]: 
+            return participant[n]
+    return participant[-1]
