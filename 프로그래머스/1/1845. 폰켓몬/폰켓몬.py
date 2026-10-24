@@ -1,9 +1,10 @@
-from collections import Counter
-
 def solution(nums):
-    count = Counter(nums)
-    if len(count) >= len(nums)/2:
-        answer = len(nums)/2
-    else: 
-        answer = len(count)
+    answer = 0
+    n = []
+    for m in nums:
+        if m not in n:
+            n.append(m)
+            answer+=1
+    if answer >= (len(nums))/2:
+        answer = (len(nums))/2
     return answer
